@@ -1,22 +1,51 @@
 import React from "react";
+import Card from "./Card";
 
-const Home = () => {
+const Home = (props) => {
+  console.log("props", props);
   return (
     <div>
-      <div className="add-to-cart">
-        <img src="https://png.pngtree.com/png-vector/20190501/ourlarge/pngtree-add-to-cart--icon-design-png-image_1012561.jpg" />
-      </div>
       <h1>Home Component</h1>
-      <div className="cart-wrapper">
-        <div className="img-wrapper item">
-          <img src="https://ae01.alicdn.com/kf/H60e160fb044c4c348154fcd03e4769646/Brand-New-honor-play-3-Mobiel-Phone-6-39-4-6GB-RAM-64-128GB-ROM-Kirin.jpg_q50.jpg" />
+      <div>
+        <div className="card-layout">
+          <Card
+            src={
+              "https://www.whatmobile.com.pk/admin/images/Apple/AppleiPhone11ProMax-b.jpg"
+            }
+            title={"i-phone"}
+            price={"price:$1000.00"}
+            btn_name={"Add to cart"}
+            btn_click={props}
+          />
+          <Card
+            src={
+              "https://www.whatmobile.com.pk/admin/images/Samsung/SamsungGalaxyS10Plus512GB-b.jpg"
+            }
+            title={"Samsung"}
+            price={"price:$2000.00"}
+            btn_name={"Add to cart"}
+            btn_click={props}
+          />
         </div>
-        <div className="text-wrapper item">
-          <span>I-phone</span>
-          <span>price:1000$</span>
-        </div>
-        <div className="btn-wrapper item">
-          <button>Add to cart</button>
+        <div className="card-layout">
+          <Card
+            src={
+              "https://www.whatmobile.com.pk/admin/images/Oppo/OppoReno4Pro-b.jpg"
+            }
+            title={"Oppo"}
+            price={"price:$700.00"}
+            btn_name={"Add to cart"}
+            btn_click={props}
+          />
+          <Card
+            src={
+              "https://www.whatmobile.com.pk/admin/images/Vivo/VivoY20-b.jpg"
+            }
+            title={"Vivo"}
+            price={"price:$900.00"}
+            btn_name={"Add to cart"}
+            btn_click={props}
+          />
         </div>
       </div>
     </div>
